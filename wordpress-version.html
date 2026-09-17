@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Business Meeting 2026</title>
+  <meta name="description" content="A free six-week live business training with Chigozie Nkwo. For people serious about building businesses that actually work." />
+  
+  <!-- Google Fonts: Oswald & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET & BASE STYLING (Scoped and WordPress Theme Resistant) */
+    #tbm-wordpress-app,
+    #tbm-wordpress-app *,
+    #tbm-wordpress-app *::before,
+    #tbm-wordpress-app *::after {
+      box-sizing: border-box !important;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    #tbm-wordpress-app {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+      background-color: #ffffff !important;
+      color: #0f172a !important;
+      line-height: 1.5 !important;
+      font-size: 16px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+      position: relative !important;
+      clear: both !important;
+    }
+
+    /* WORDPRESS THEME FULL-WIDTH BREAKOUT */
+    /* When embedded inside narrow WordPress page templates (.entry-content, #content, .site-main), */
+    /* ensure the app container stretches cleanly to fill available width without horizontal overflow */
+    .entry-content > #tbm-wordpress-app,
+    .post-content > #tbm-wordpress-app,
+    .wp-block-html > #tbm-wordpress-app,
+    .elementor-widget-container > #tbm-wordpress-app {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* TYPOGRAPHY */
+    .tbm-font-display {
+      font-family: 'Oswald', sans-serif !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.02em !important;
+    }
+
+    .tbm-font-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    }
+
+    /* BACKGROUND TEXTURES & BLUEPRINTS */
+    .tbm-blueprint-grid {
+      background-size: 32px 32px !important;
+      background-image: 
+        linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px) !important;
+    }
+
+    .tbm-blueprint-grid-accent {
+      background-size: 64px 64px !important;
+      background-image: 
+        linear-gradient(to right, rgba(37, 99, 235, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.06) 1px, transparent 1px) !important;
+    }
+
+    .tbm-dot-matrix {
+      background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px) !important;
+      background-size: 20px 20px !important;
+    }
+
+    /* LAYOUT CONTAINERS */
+    /* Sized with responsive clamps to fit standard WordPress widths (720px, 800px, 1140px, full) seamlessly */
+    .tbm-container {
+      width: 100% !important;
+      max-width: 1152px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: clamp(16px, 4vw, 32px) !important;
+      padding-right: clamp(16px, 4vw, 32px) !important;
+    }
+
+    .tbm-container-narrow {
+      width: 100% !important;
+      max-width: 896px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: clamp(16px, 4vw, 32px) !important;
+      padding-right: clamp(16px, 4vw, 32px) !important;
+    }
+
+    /* NAVBAR */
+    .tbm-navbar {
+      position: sticky !important;
+      position: -webkit-sticky !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      min-height: 72px !important;
+      height: 76px !important;
+      background: rgba(255, 255, 255, 0.96) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+      z-index: 1000 !important;
+      display: flex !important;
+      align-items: center !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03) !important;
+    }
+
+    .tbm-nav-inner {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+
+    /* BRAND LOGO WRAPPER */
+    .tbm-logo-wrapper {
+      display: inline-flex !important;
+      align-items: center !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      position: relative !important;
+    }
+
+    .tbm-logo-svg {
+      height: 42px !important;
+      width: auto !important;
+      max-width: clamp(190px, 32vw, 290px) !important;
+      object-fit: contain !important;
+      flex-shrink: 0 !important;
+      display: block !important;
+    }
+
+    .tbm-custom-logo-img {
+      max-height: 44px !important;
+      width: auto !important;
+      max-width: 260px !important;
+      object-fit: contain !important;
+      display: none;
+    }
+
+    .tbm-logo-upload-btn {
+      margin-left: 6px !important;
+      padding: 4px 6px !important;
+      border-radius: 6px !important;
+      background: #f1f5f9 !important;
+      border: 1px solid #e2e8f0 !important;
+      color: #64748b !important;
+      font-size: 11px !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      opacity: 0.4 !important;
+      transition: opacity 0.2s ease !important;
+    }
+
+    .tbm-logo-wrapper:hover .tbm-logo-upload-btn,
+    .tbm-logo-upload-btn:hover {
+      opacity: 1 !important;
+      background: #e2e8f0 !important;
+      color: #0f172a !important;
+    }
+
+    /* BUTTONS */
+    .tbm-btn-primary {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      background: #2563eb !important;
+      color: #ffffff !important;
+      font-family: 'Oswald', sans-serif !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      padding: 14px 28px !important;
+      border-radius: 12px !important;
+      border: none !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.35) !important;
+      transition: all 0.2s ease !important;
+      position: relative !important;
+      overflow: hidden !important;
+      line-height: 1 !important;
+    }
+
+    .tbm-btn-primary:hover {
+      background: #1d4ed8 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 14px 28px -5px rgba(37, 99, 235, 0.45) !important;
+    }
+
+    .tbm-btn-primary:active {
+      transform: translateY(0) !important;
+    }
+
+    .tbm-btn-nav {
+      padding: 10px 20px !important;
+      font-size: 13px !important;
+      border-radius: 10px !important;
+    }
+
+    /* SHIMMER EFFECT */
+    @keyframes tbm-shimmer {
+      0% { transform: translateX(-150%) skewX(-15deg); }
+      100% { transform: translateX(250%) skewX(-15deg); }
+    }
+
+    .tbm-btn-primary::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 40% !important;
+      height: 100% !important;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent) !important;
+      animation: tbm-shimmer 4s infinite cubic-bezier(0.4, 0, 0.2, 1) !important;
+      pointer-events: none !important;
+    }
+
+    /* BADGES */
+    .tbm-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 6px 12px !important;
+      border-radius: 9999px !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      line-height: 1 !important;
+    }
+
+    .tbm-badge-blue {
+      background: #eff6ff !important;
+      color: #1d4ed8 !important;
+      border: 1px solid #bfdbfe !important;
+    }
+
+    .tbm-badge-slate {
+      background: #f1f5f9 !important;
+      color: #334155 !important;
+      border: 1px solid #e2e8f0 !important;
+    }
+
+    .tbm-badge-emerald {
+      background: #ecfdf5 !important;
+      color: #047857 !important;
+      border: 1px solid #a7f3d0 !important;
+    }
+
+    /* SECTIONS */
+    .tbm-section {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+      position: relative !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-section {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
+      }
+    }
+
+    .tbm-bg-light { background-color: #f8fafc !important; }
+    .tbm-bg-white { background-color: #ffffff !important; }
+
+    /* SECTION HEADERS */
+    .tbm-tagline {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 11px !important;
+      font-family: ui-monospace, monospace !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.12em !important;
+      color: #2563eb !important;
+      text-transform: uppercase !important;
+      margin-bottom: 10px !important;
+    }
+
+    .tbm-heading-lg {
+      font-family: 'Oswald', sans-serif !important;
+      font-size: 32px !important;
+      line-height: 1.15 !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.01em !important;
+      color: #0f172a !important;
+      margin-bottom: 16px !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-heading-lg {
+        font-size: 44px !important;
+      }
+    }
+
+    .tbm-divider {
+      width: 64px !important;
+      height: 4px !important;
+      background: #2563eb !important;
+      border-radius: 9999px !important;
+      margin-bottom: 24px !important;
+    }
+
+    /* CARDS & GRIDS */
+    .tbm-grid-2 {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+
+    .tbm-grid-3 {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+
+    @media (min-width: 768px) {
+      .tbm-grid-2 { grid-template-columns: repeat(2, 1fr) !important; }
+      .tbm-grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
+    }
+
+    .tbm-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 16px !important;
+      padding: 24px !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
+      transition: all 0.25s ease !important;
+      position: relative !important;
+    }
+
+    .tbm-card:hover {
+      border-color: #3b82f6 !important;
+      box-shadow: 0 10px 20px -3px rgba(37, 99, 235, 0.1) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* HERO SECTION */
+    .tbm-hero {
+      padding-top: 130px !important;
+      padding-bottom: 80px !important;
+      background: linear-gradient(180deg, rgba(248,250,252,0.9) 0%, #ffffff 60%, rgba(248,250,252,0.5) 100%) !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+
+    .tbm-hero-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+      align-items: center !important;
+    }
+
+    @media (min-width: 992px) {
+      .tbm-hero-grid {
+        grid-template-columns: 1.25fr 0.75fr !important;
+      }
+    }
+
+    .tbm-hero-title {
+      font-family: 'Oswald', sans-serif !important;
+      font-size: 38px !important;
+      font-weight: 700 !important;
+      line-height: 1.05 !important;
+      text-transform: uppercase !important;
+      color: #0f172a !important;
+      letter-spacing: -0.01em !important;
+      margin-bottom: 14px !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-hero-title {
+        font-size: 56px !important;
+      }
+    }
+
+    .tbm-hero-sub {
+      font-size: 20px !important;
+      font-weight: 600 !important;
+      color: #1d4ed8 !important;
+      line-height: 1.35 !important;
+      margin-bottom: 20px !important;
+    }
+
+    .tbm-hero-desc {
+      font-size: 17px !important;
+      color: #475569 !important;
+      line-height: 1.6 !important;
+      margin-bottom: 24px !important;
+    }
+
+    .tbm-format-box {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 16px !important;
+      padding: 16px 20px !important;
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+      margin-bottom: 24px !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03) !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-format-box {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+
+    /* HERO FLYER CARD */
+    .tbm-flyer-card {
+      background: #ffffff !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 24px !important;
+      padding: 28px !important;
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08) !important;
+      position: relative !important;
+    }
+
+    /* MODAL POPUP (ROBUST, MOBILE-READY & VIEWPORT OPTIMIZED) */
+    .tbm-modal-backdrop {
+      display: none;
+      position: fixed !important;
+      inset: 0 !important;
+      background: rgba(15, 23, 42, 0.65) !important;
+      backdrop-filter: blur(4px) !important;
+      z-index: 999999 !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+      padding: 10px !important;
+      overflow-y: auto !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-modal-backdrop {
+        padding: 20px !important;
+        align-items: center !important;
+      }
+    }
+
+    .tbm-modal-backdrop.active {
+      display: flex !important;
+    }
+
+    .tbm-modal-dialog {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      width: 100% !important;
+      max-width: 720px !important;
+      border-radius: 20px !important;
+      border: 1px solid #cbd5e1 !important;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+      max-height: calc(100vh - 20px) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-modal-dialog {
+        border-radius: 24px !important;
+        max-height: 90vh !important;
+      }
+    }
+
+    .tbm-modal-header {
+      flex-shrink: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 16px 24px !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+      background: #ffffff !important;
+    }
+
+    .tbm-modal-close {
+      background: #f1f5f9 !important;
+      border: none !important;
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 10px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      color: #475569 !important;
+      font-size: 20px !important;
+      line-height: 1 !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .tbm-modal-close:hover {
+      background: #e2e8f0 !important;
+      color: #0f172a !important;
+    }
+
+    .tbm-modal-body {
+      flex: 1 1 auto !important;
+      min-height: 0 !important;
+      overflow-y: auto !important;
+      padding: 24px !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-modal-body {
+        padding: 32px !important;
+      }
+    }
+
+    /* FORM ELEMENTS */
+    .tbm-form-section {
+      background: #f8fafc !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 16px !important;
+      padding: 20px !important;
+      margin-bottom: 24px !important;
+    }
+
+    .tbm-form-title {
+      font-family: 'Oswald', sans-serif !important;
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      color: #0f172a !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+      padding-bottom: 8px !important;
+      margin-bottom: 16px !important;
+    }
+
+    .tbm-field {
+      margin-bottom: 16px !important;
+    }
+
+    .tbm-label {
+      display: block !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      color: #1e293b !important;
+      margin-bottom: 6px !important;
+    }
+
+    .tbm-label-required {
+      color: #2563eb !important;
+      font-weight: bold !important;
+    }
+
+    .tbm-help-text {
+      font-size: 12px !important;
+      color: #64748b !important;
+      margin-bottom: 8px !important;
+      line-height: 1.4 !important;
+    }
+
+    .tbm-input {
+      width: 100% !important;
+      padding: 12px 16px !important;
+      font-size: 14px !important;
+      border-radius: 10px !important;
+      border: 1px solid #cbd5e1 !important;
+      background: #ffffff !important;
+      color: #0f172a !important;
+      outline: none !important;
+      transition: all 0.2s ease !important;
+      font-family: inherit !important;
+    }
+
+    .tbm-input:focus {
+      border-color: #2563eb !important;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+    }
+
+    .tbm-input.error {
+      border-color: #ef4444 !important;
+    }
+
+    .tbm-error-msg {
+      font-size: 12px !important;
+      color: #dc2626 !important;
+      margin-top: 4px !important;
+      display: none;
+    }
+
+    .tbm-error-msg.visible {
+      display: block !important;
+    }
+
+    /* SELECTION PILLS & BUTTON GRIDS */
+    .tbm-options-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+      gap: 8px !important;
+    }
+
+    .tbm-option-item {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      padding: 10px 14px !important;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 10px !important;
+      background: #ffffff !important;
+      color: #1e293b !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+      user-select: none !important;
+    }
+
+    .tbm-option-item:hover {
+      border-color: #94a3b8 !important;
+      background: #f1f5f9 !important;
+    }
+
+    .tbm-option-item.selected {
+      background: #eff6ff !important;
+      border-color: #2563eb !important;
+      color: #1e40af !important;
+      font-weight: 600 !important;
+    }
+
+    .tbm-option-vertical {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+
+    .tbm-radio-card {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 10px !important;
+      padding: 12px 16px !important;
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 10px !important;
+      background: #ffffff !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+    }
+
+    .tbm-radio-card:hover {
+      background: #f1f5f9 !important;
+    }
+
+    .tbm-radio-card.selected {
+      background: #eff6ff !important;
+      border-color: #2563eb !important;
+      font-weight: 600 !important;
+    }
+
+    .tbm-checkbox-pill {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 10px 14px !important;
+      border: 1px solid #cbd5e1 !important;
+      border-radius: 10px !important;
+      background: #ffffff !important;
+      cursor: pointer !important;
+      font-size: 13px !important;
+      text-align: left !important;
+      transition: all 0.15s ease !important;
+    }
+
+    .tbm-checkbox-pill.selected {
+      background: #eff6ff !important;
+      border-color: #2563eb !important;
+      color: #1e40af !important;
+      font-weight: 600 !important;
+    }
+
+    .tbm-checkbox-box {
+      width: 16px !important;
+      height: 16px !important;
+      border-radius: 4px !important;
+      border: 1px solid #94a3b8 !important;
+      background: #ffffff !important;
+      flex-shrink: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .tbm-checkbox-pill.selected .tbm-checkbox-box {
+      background: #2563eb !important;
+      border-color: #2563eb !important;
+      color: #ffffff !important;
+    }
+
+    /* FOOTER */
+    .tbm-footer {
+      background: #f8fafc !important;
+      border-top: 1px solid #e2e8f0 !important;
+      padding: 40px 0 !important;
+    }
+
+    .tbm-footer-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 20px !important;
+      text-align: center !important;
+    }
+
+    @media (min-width: 640px) {
+      .tbm-footer-inner {
+        flex-direction: row !important;
+        text-align: left !important;
+      }
+    }
+
+    /* SUCCESS SCREEN IN MODAL */
+    .tbm-success-card {
+      text-align: center !important;
+      padding: 30px 10px !important;
+    }
+
+    .tbm-success-icon {
+      width: 64px !important;
+      height: 64px !important;
+      border-radius: 50% !important;
+      background: #ecfdf5 !important;
+      border: 1px solid #a7f3d0 !important;
+      color: #059669 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 auto 20px auto !important;
+      font-size: 32px !important;
+    }
+  </style>
+</head>
+<body>
+
+<div id="tbm-wordpress-app">
+  <!-- TOP NAVBAR -->
+  <header class="tbm-navbar">
+    <div class="tbm-container tbm-nav-inner">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <!-- Official Crest & Monogram Logo (cn-brand-logo.svg) -->
+        <a href="#tbm-wordpress-app" class="tbm-logo-wrapper" title="Chigozie Nkwo — The Business Meeting 2026">
+          <svg viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="tbm-logo-svg" id="tbm-brand-logo-svg" preserveAspectRatio="xMinYMid meet">
+            <g transform="translate(15, 12)">
+              <!-- Outer Shield with Rounded Corners and Soft Glow Accent -->
+              <path d="M25 15 H195 C200 15 205 19 205 25 V125 C205 178 110 215 110 215 C110 215 15 178 15 125 V25 C15 19 20 15 25 15 Z" fill="#090d16" stroke="#1e293b" stroke-width="2" />
+              <!-- Inner Gold/Accent Border Accent -->
+              <path d="M28 26 H192 V122 C192 168 110 202 110 202 C110 202 28 168 28 122 V26 Z" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-opacity="0.35" />
+              
+              <!-- Crown Elements Atop Monogram -->
+              <path d="M82 62 L94 46 L110 58 L126 46 L138 62 H82 Z" fill="#ffffff" />
+              <circle cx="94" cy="42" r="2.5" fill="#ffffff" />
+              <circle cx="110" cy="52" r="2.5" fill="#ffffff" />
+              <circle cx="126" cy="42" r="2.5" fill="#ffffff" />
+              
+              <!-- Premium Interlocking Monogram C & N -->
+              <!-- Letter C -->
+              <path d="M102 78 C94 78 82 85 82 104 C82 123 94 130 102 130 C109 130 115 127 118 123 L118 113 C118 113 112 117 104 117 C97 117 92 112 92 104 C92 96 97 91 104 91 C112 91 118 95 118 95 L118 85 C115 81 109 78 102 78 Z" fill="#ffffff" />
+              
+              <!-- Letter N (Interlocking and Precision Angled) -->
+              <path d="M108 81 H117 L132 111 V81 H141 V127 H132 L117 97 V127 H108 V81 Z" fill="#ffffff" fill-opacity="0.95" />
+              
+              <!-- Refined Underline & Star Embellishment -->
+              <line x1="68" y1="144" x2="152" y2="144" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.8" />
+              <polygon points="110,140 112,143.5 116,144 113,146.5 114,150 110,148 106,150 107,146.5 104,144 108,143.5" fill="#ffffff" />
+            </g>
+            
+            <!-- Exact Typography Matching Chigozie Nkwo Identity -->
+            <text x="245" y="132" font-family="'Oswald', sans-serif" font-size="78" font-weight="700" letter-spacing="0.04em" fill="#090d16">CHIGOZIE NKWO</text>
+            <text x="248" y="165" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" letter-spacing="0.22em" fill="#2563eb">THE BUSINESS MEETING 2026</text>
+          </svg>
+          <img id="tbm-custom-logo-display" class="tbm-custom-logo-img" alt="Chigozie Nkwo Brand Logo" />
+        </a>
+
+        <!-- Custom Logo Upload / Change Control (Allows uploading any custom logo directly on the page) -->
+        <label class="tbm-logo-upload-btn" title="Change or upload custom logo image (SVG, PNG, JPG)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span style="font-size:10px; font-weight:600;">Logo</span>
+          <input type="file" id="tbm-logo-file-input" accept="image/*,.svg" style="display:none;" />
+        </label>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="display:none; text-align:right;" class="tbm-desktop-sched">
+          <div style="font-size:11px; color:#64748b; font-weight:600; text-transform:uppercase;">Starts 16 Sept 2026</div>
+          <div style="font-size:12px; color:#059669; font-weight:700;">Live on YouTube • Free</div>
+        </div>
+        <button type="button" class="tbm-btn-primary tbm-btn-nav tbm-open-modal-trigger">
+          JOIN NOW
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="tbm-hero tbm-blueprint-grid">
+    <div class="tbm-container">
+      <div class="tbm-hero-grid">
+        <div>
+          <!-- Badges -->
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px;">
+            <span class="tbm-badge tbm-badge-blue">
+              <span style="width:6px; height:6px; border-radius:50%; background:#2563eb;"></span>
+              A 6-Week Live Business Training
+            </span>
+            <span class="tbm-badge tbm-badge-slate">Every Wednesday from 16 September 2026</span>
+            <span class="tbm-badge tbm-badge-emerald">Live on YouTube • Completely FREE</span>
+          </div>
+
+          <h1 class="tbm-hero-title">THE BUSINESS MEETING 2026</h1>
+          <p class="tbm-hero-sub">For People Serious About Building Businesses That Actually Work.</p>
+          
+          <div class="tbm-hero-desc">
+            <p style="margin-bottom:10px;">You can start a business in a day.</p>
+            <p style="margin-bottom:10px;">Building one that gets customers, makes money, has a team, runs on systems and can still exist years from now is a different challenge.</p>
+            <p style="font-weight:700; color:#0f172a; font-size:18px;">That is what The Business Meeting is about.</p>
+          </div>
+
+          <div class="tbm-format-box">
+            <div>
+              <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:700; margin-bottom:4px;">FORMAT</div>
+              <div style="font-weight:700; color:#0f172a;">A 6-Week Live Business Training</div>
+              <div style="font-size:12px; color:#64748b;">Every Wednesday from 16 September 2026</div>
+            </div>
+            <div>
+              <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:700; margin-bottom:4px;">ACCESS</div>
+              <div style="font-weight:700; color:#0f172a;">Live on YouTube</div>
+              <div style="font-size:12px; color:#059669; font-weight:700;">Completely FREE</div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px;">
+            <button type="button" class="tbm-btn-primary tbm-open-modal-trigger" style="font-size:18px; padding:16px 36px;">
+              JOIN THE BUSINESS MEETING →
+            </button>
+            <span style="font-size:13px; color:#64748b; display:flex; align-items:center; gap:6px;">
+              <span style="width:8px; height:8px; border-radius:50%; background:#10b981;"></span>
+              Free Instant Confirmation
+            </span>
+          </div>
+        </div>
+
+        <!-- Speaker Flyer Card -->
+        <div>
+          <div class="tbm-flyer-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e2e8f0; padding-bottom:16px; margin-bottom:16px;">
+              <span style="font-size:12px; font-weight:700; font-family:monospace; color:#2563eb; background:#eff6ff; padding:4px 8px; border-radius:6px;">
+                6-WEEK LIVE TRAINING
+              </span>
+              <span style="font-size:12px; color:#059669; font-weight:700; background:#ecfdf5; padding:4px 8px; border-radius:6px;">
+                FREE ACCESS
+              </span>
+            </div>
+
+            <div style="margin-bottom:16px;">
+              <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:700;">WITH</div>
+              <h3 class="tbm-font-display" style="font-size:26px; font-weight:700; color:#0f172a;">CHIGOZIE NKWO</h3>
+              <p style="font-size:13px; color:#64748b;">10 Years Building Businesses • 3 Active Companies</p>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; margin-bottom:20px;">
+              <div style="font-size:12px; font-weight:700; color:#1e293b; margin-bottom:8px;">PRACTICAL BUSINESS ROADMAP</div>
+              <ul style="font-size:13px; color:#475569; list-style:none; line-height:1.7;">
+                <li>✓ Customer Acquisition & Sales</li>
+                <li>✓ Business Systems & Automation</li>
+                <li>✓ High-Performance Teams</li>
+                <li>✓ Revenue Growth & Expansion</li>
+              </ul>
+            </div>
+
+            <button type="button" class="tbm-btn-primary tbm-open-modal-trigger" style="width:100%; font-size:15px; padding:14px 20px;">
+              REGISTER NOW — 100% FREE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: THE BUSINESS NEED -->
+  <section class="tbm-section tbm-bg-light">
+    <div class="tbm-container-narrow">
+      <div class="tbm-tagline">DIAGNOSTIC // CORE REALITY</div>
+      <h2 class="tbm-heading-lg">YOU DON'T JUST NEED A BUSINESS. YOU NEED A BUSINESS THAT WORKS.</h2>
+      <div class="tbm-divider"></div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="tbm-card" style="display:flex; gap:16px; align-items:flex-start;">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb;">01</span>
+          <p style="font-size:16px; color:#334155;">Maybe you have been thinking about starting a business but don't know how to turn your idea into something people will actually pay for.</p>
+        </div>
+        <div class="tbm-card" style="display:flex; gap:16px; align-items:flex-start;">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb;">02</span>
+          <p style="font-size:16px; color:#334155;">Maybe you already have a business, but getting customers is difficult.</p>
+        </div>
+        <div class="tbm-card" style="display:flex; gap:16px; align-items:flex-start;">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb;">03</span>
+          <p style="font-size:16px; color:#334155;">Maybe you are making sales, but your revenue isn't where you want it to be.</p>
+        </div>
+        <div class="tbm-card" style="display:flex; gap:16px; align-items:flex-start;">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb;">04</span>
+          <p style="font-size:16px; color:#334155;">Maybe everything still depends on you.</p>
+        </div>
+        <div class="tbm-card" style="display:flex; gap:16px; align-items:flex-start;">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb;">05</span>
+          <p style="font-size:16px; color:#334155;">Or maybe you simply know that your business can become much bigger than it is today, but you don't know what needs to change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WHAT WE WILL WORK ON (6 PHASES) -->
+  <section class="tbm-section tbm-bg-white">
+    <div class="tbm-container">
+      <div class="tbm-tagline">SYLLABUS ARCHITECTURE // 6 PHASES</div>
+      <h2 class="tbm-heading-lg">WHAT WE WILL WORK ON</h2>
+      <div class="tbm-divider"></div>
+      <p style="font-size:18px; color:#475569; margin-bottom:32px;">Over six live sessions, we will break down the real anatomy of a working enterprise.</p>
+
+      <div class="tbm-grid-3">
+        <div class="tbm-card">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb; font-size:13px;">PHASE // 01</span>
+          <h3 class="tbm-font-display" style="font-size:22px; font-weight:700; margin:8px 0;">START</h3>
+          <p style="font-size:14px; color:#475569;">Turn an idea into a real business with a clear customer, offer and business model.</p>
+        </div>
+        <div class="tbm-card">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb; font-size:13px;">PHASE // 02</span>
+          <h3 class="tbm-font-display" style="font-size:22px; font-weight:700; margin:8px 0;">BUILD</h3>
+          <p style="font-size:14px; color:#475569;">Create the foundation your business needs to operate properly.</p>
+        </div>
+        <div class="tbm-card">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb; font-size:13px;">PHASE // 03</span>
+          <h3 class="tbm-font-display" style="font-size:22px; font-weight:700; margin:8px 0;">GET CUSTOMERS</h3>
+          <p style="font-size:14px; color:#475569;">Understand practical ways to attract leads, make sales and build a consistent customer base.</p>
+        </div>
+        <div class="tbm-card">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb; font-size:13px;">PHASE // 04</span>
+          <h3 class="tbm-font-display" style="font-size:22px; font-weight:700; margin:8px 0;">GROW REVENUE</h3>
+          <p style="font-size:14px; color:#475569;">Understand the different ways to increase sales and make more money from your business.</p>
+        </div>
+        <div class="tbm-card">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb; font-size:13px;">PHASE // 05</span>
+          <h3 class="tbm-font-display" style="font-size:22px; font-weight:700; margin:8px 0;">BUILD SYSTEMS & TEAMS</h3>
+          <p style="font-size:14px; color:#475569;">Move from doing everything yourself to creating processes and people that help the business operate.</p>
+        </div>
+        <div class="tbm-card">
+          <span style="font-family:monospace; font-weight:700; color:#2563eb; font-size:13px;">PHASE // 06</span>
+          <h3 class="tbm-font-display" style="font-size:22px; font-weight:700; margin:8px 0;">SCALE</h3>
+          <p style="font-size:14px; color:#475569;">Understand what it takes to take a working business to the next level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WHY LISTEN TO ME -->
+  <section class="tbm-section tbm-bg-light">
+    <div class="tbm-container-narrow">
+      <div class="tbm-tagline">SPEAKER DOSSIER // CHIGOZIE NKWO</div>
+      <h2 class="tbm-heading-lg">WHY LISTEN TO ME?</h2>
+      <div class="tbm-divider"></div>
+
+      <div class="tbm-grid-3" style="margin-bottom:28px;">
+        <div class="tbm-card" style="text-align:center;">
+          <div style="font-size:11px; font-family:monospace; font-weight:700; color:#64748b;">EXPERIENCE</div>
+          <div class="tbm-font-display" style="font-size:28px; font-weight:700; color:#2563eb; margin:4px 0;">10 YEARS</div>
+          <div style="font-size:12px; color:#64748b;">Hands-on enterprise building</div>
+        </div>
+        <div class="tbm-card" style="text-align:center;">
+          <div style="font-size:11px; font-family:monospace; font-weight:700; color:#64748b;">VENTURES LAUNCHED</div>
+          <div class="tbm-font-display" style="font-size:28px; font-weight:700; color:#2563eb; margin:4px 0;">7+ VENTURES</div>
+          <div style="font-size:12px; color:#64748b;">Real battle-tested lessons</div>
+        </div>
+        <div class="tbm-card" style="text-align:center;">
+          <div style="font-size:11px; font-family:monospace; font-weight:700; color:#64748b;">ACTIVE ENTERPRISES</div>
+          <div class="tbm-font-display" style="font-size:28px; font-weight:700; color:#2563eb; margin:4px 0;">3 COMPANIES</div>
+          <div style="font-size:12px; color:#64748b;">Live clients, teams & revenue</div>
+        </div>
+      </div>
+
+      <div class="tbm-card" style="font-size:16px; color:#334155; line-height:1.7;">
+        <p style="margin-bottom:12px;">Over the past 10 years, I have started multiple businesses. Some failed completely. Some made money. Some evolved.</p>
+        <p style="margin-bottom:12px;">Today, I actively run three businesses across technology, digital marketing, and workforce development. I understand what it means to start with zero, struggle to get your first customer, hire employees, build operational systems, and generate real, consistent revenue.</p>
+        <p style="font-weight:700; color:#0f172a;">This program is built on real execution—not recycled textbook theory.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: RESOURCES INCLUDED -->
+  <section class="tbm-section tbm-bg-white">
+    <div class="tbm-container">
+      <div class="tbm-tagline">COMPLIMENTARY ASSETS // ATTENDEE KIT</div>
+      <h2 class="tbm-heading-lg">HERE'S WHAT YOU'LL GET</h2>
+      <div class="tbm-divider"></div>
+      <p style="font-size:18px; color:#475569; margin-bottom:32px;">Because you're part of The Business Meeting, you're not just getting the six live sessions. You receive practical implementation toolkits.</p>
+
+      <div class="tbm-grid-2">
+        <div class="tbm-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <span style="font-family:monospace; font-size:11px; font-weight:700; color:#2563eb; background:#eff6ff; padding:3px 8px; border-radius:4px;">KIT // 01</span>
+            <span style="font-size:11px; font-weight:700; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px;">FREE</span>
+          </div>
+          <h3 class="tbm-font-display" style="font-size:24px; font-weight:700; margin-bottom:8px;">THE BUSINESS BOOKS</h3>
+          <p style="font-size:14px; color:#475569; margin-bottom:16px;">Curated digital business books and strategic playbooks designed to deepen your grasp on sales, systems, and enterprise growth.</p>
+          <div style="font-size:13px; font-weight:600; color:#0f172a;">✓ Delivered directly to registered participants via the private WhatsApp Channel.</div>
+        </div>
+
+        <div class="tbm-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <span style="font-family:monospace; font-size:11px; font-weight:700; color:#2563eb; background:#eff6ff; padding:3px 8px; border-radius:4px;">KIT // 02</span>
+            <span style="font-size:11px; font-weight:700; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px;">FREE</span>
+          </div>
+          <h3 class="tbm-font-display" style="font-size:24px; font-weight:700; margin-bottom:8px;">THE BUSINESS TEMPLATES</h3>
+          <p style="font-size:14px; color:#475569; margin-bottom:16px;">Ready-to-use frameworks, financial projection models, customer acquisition scripts, and operational SOP templates.</p>
+          <div style="font-size:13px; font-weight:600; color:#0f172a;">✓ Plug-and-play resources to save months of trial and error.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: ATTENDEE OPPORTUNITIES -->
+  <section class="tbm-section tbm-bg-light">
+    <div class="tbm-container">
+      <div class="tbm-tagline">ATTENDEE INCENTIVES // GRANT POOL</div>
+      <h2 class="tbm-heading-lg">OPPORTUNITIES FOR ATTENDEES</h2>
+      <div class="tbm-divider"></div>
+      <p style="font-size:18px; color:#475569; margin-bottom:32px;">During the 6 weeks, selected registered attendees will receive direct hands-on support for their enterprises.</p>
+
+      <div class="tbm-grid-2">
+        <div class="tbm-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <span class="tbm-font-display" style="font-size:20px; font-weight:700; color:#2563eb;">10 PEOPLE</span>
+            <span style="font-size:12px; font-weight:700; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px;">VALUE: ₦250,000 EACH</span>
+          </div>
+          <p style="font-size:15px; color:#334155; font-weight:500;">Will receive a FREE 45-minute Business Coaching Session directly with Chigozie Nkwo.</p>
+        </div>
+
+        <div class="tbm-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <span class="tbm-font-display" style="font-size:20px; font-weight:700; color:#2563eb;">2 PEOPLE</span>
+            <span style="font-size:12px; font-weight:700; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px;">VALUE: ₦600,000 EACH</span>
+          </div>
+          <p style="font-size:15px; color:#334155; font-weight:500;">Will receive 2 months of comprehensive 1-on-1 Business Consulting.</p>
+        </div>
+
+        <div class="tbm-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <span class="tbm-font-display" style="font-size:20px; font-weight:700; color:#2563eb;">1 BUSINESS</span>
+            <span style="font-size:12px; font-weight:700; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px;">VALUE: ₦450,000</span>
+          </div>
+          <p style="font-size:15px; color:#334155; font-weight:500;">With 20+ team members will receive a FREE customized team training session from SceptralHub.</p>
+        </div>
+
+        <div class="tbm-card">
+          <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <span class="tbm-font-display" style="font-size:20px; font-weight:700; color:#2563eb;">5 BUSINESSES</span>
+            <span style="font-size:12px; font-weight:700; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px;">VALUE: ₦50,000 EACH</span>
+          </div>
+          <p style="font-size:15px; color:#334155; font-weight:500;">Doing $1,000+ monthly revenue will receive a full Digital Marketing Strategy Consultancy from Sceptral Go Digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: WHO THIS IS FOR -->
+  <section class="tbm-section tbm-bg-white">
+    <div class="tbm-container-narrow">
+      <div class="tbm-tagline">ATTENDEE FIT EVALUATION</div>
+      <h2 class="tbm-heading-lg">THIS IS FOR YOU IF...</h2>
+      <div class="tbm-divider"></div>
+
+      <div class="tbm-grid-2">
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You have a business idea and want to turn it into a real business.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You already run a business and want to grow it.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You want to get more customers.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You want to increase your revenue.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You want to build a team.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You want to put systems around your business.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You want to stop doing everything yourself.</span>
+        </div>
+        <div class="tbm-card" style="display:flex; align-items:center; gap:12px;">
+          <span style="color:#2563eb; font-weight:bold; font-size:18px;">✓</span>
+          <span style="font-size:15px; color:#334155;">You want to build a business that can last.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: NOT MOTIVATION -->
+  <section class="tbm-section tbm-bg-light">
+    <div class="tbm-container-narrow" style="text-align:center;">
+      <div class="tbm-tagline" style="justify-content:center;">OPERATIONAL DOCTRINE // NO HYPE</div>
+      <h2 class="tbm-heading-lg" style="margin-left:auto; margin-right:auto;">THIS IS NOT ANOTHER BUSINESS MOTIVATION SESSION.</h2>
+      <div class="tbm-divider" style="margin-left:auto; margin-right:auto;"></div>
+
+      <p style="font-size:20px; font-weight:600; color:#0f172a; margin-bottom:8px;">We're not meeting for six weeks to tell you to "dream bigger."</p>
+      <p style="font-size:18px; color:#475569; margin-bottom:28px;">We're going to talk about the actual business.</p>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:32px;">
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Customers</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Sales</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Revenue</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Offers</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Marketing</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Teams</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Systems</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Growth</span>
+        <span class="tbm-badge tbm-badge-slate" style="font-size:14px; padding:8px 16px;">Scale</span>
+      </div>
+
+      <div class="tbm-card" style="background:#ffffff; max-width:640px; margin:0 auto; padding:20px;">
+        <p style="font-size:15px; color:#334155; margin:0;">
+          If you are looking for emotional hype, this is not for you. If you want structural clarity, operational frameworks, and actionable execution, you belong in the room.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FINAL CALLOUT -->
+  <section class="tbm-section tbm-bg-white">
+    <div class="tbm-container-narrow" style="text-align:center;">
+      <div class="tbm-tagline" style="justify-content:center;">FINAL DIRECTIVE // CONVOCATION</div>
+      <h2 class="tbm-heading-lg" style="margin-left:auto; margin-right:auto;">THE BUSINESS MEETING 2026</h2>
+      <p style="font-size:22px; font-weight:700; color:#2563eb; margin-bottom:8px;">6 Weeks. 6 Conversations. One Goal:</p>
+      <h3 class="tbm-font-display" style="font-size:32px; font-weight:700; color:#0f172a; margin-bottom:24px;">BUILD A BUSINESS THAT ACTUALLY WORKS.</h3>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-bottom:32px;">
+        <span class="tbm-card" style="padding:10px 18px; font-size:14px; font-weight:600;">Every Wednesday</span>
+        <span class="tbm-card" style="padding:10px 18px; font-size:14px; font-weight:600;">Starting 16 September 2026</span>
+        <span class="tbm-card" style="padding:10px 18px; font-size:14px; font-weight:600; color:#059669;">Live on YouTube • 100% Free</span>
+      </div>
+
+      <button type="button" class="tbm-btn-primary tbm-open-modal-trigger" style="font-size:19px; padding:18px 42px;">
+        JOIN THE BUSINESS MEETING NOW →
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="tbm-footer">
+    <div class="tbm-container tbm-footer-inner">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <!-- Brand Wordmark -->
+        <span class="tbm-font-display" style="font-size:20px; font-weight:700; color:#0f172a;">CHIGOZIE NKWO</span>
+        <span style="color:#cbd5e1;">|</span>
+        <span style="font-size:12px; font-family:monospace; color:#64748b;">THE BUSINESS MEETING 2026</span>
+      </div>
+      <div style="font-size:12px; font-family:monospace; color:#64748b;">
+        © 2026 Chigozie Nkwo. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- POP-UP REGISTRATION MODAL -->
+  <div id="tbm-modal" class="tbm-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="tbm-modal-dialog">
+      <!-- Modal Header -->
+      <div class="tbm-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="width:10px; height:10px; border-radius:50%; background:#10b981;"></span>
+          <div>
+            <div class="tbm-font-display" style="font-size:16px; font-weight:700; color:#0f172a; line-height:1.1;">
+              THE BUSINESS MEETING 2026
+            </div>
+            <div style="font-size:11px; font-family:monospace; color:#64748b;">
+              FREE 6-WEEK LIVE BUSINESS TRAINING • STARTS 16 SEPT
+            </div>
+          </div>
+        </div>
+        <button type="button" class="tbm-modal-close" id="tbm-modal-close-btn" aria-label="Close">✕</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="tbm-modal-body" id="tbm-modal-body-container">
+        <!-- FORM VIEW -->
+        <form id="tbm-registration-form" novalidate>
+          <!-- Intro notice -->
+          <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:14px; margin-bottom:20px; font-size:13px; color:#1e40af;">
+            <strong>Quick Registration:</strong> Enter your details below to secure your complimentary seat. You will be redirected to the private WhatsApp Channel immediately upon submission.
+          </div>
+
+          <!-- 1. PERSONAL DETAILS -->
+          <div class="tbm-form-section">
+            <h4 class="tbm-form-title">1. Personal Information</h4>
+
+            <div class="tbm-field">
+              <label class="tbm-label" for="tbm_field_fullName">
+                Full Name <span class="tbm-label-required">*</span>
+              </label>
+              <input type="text" id="tbm_field_fullName" class="tbm-input" placeholder="e.g. Samuel Okon" required />
+              <div class="tbm-error-msg" id="err_fullName">Please enter your full name.</div>
+            </div>
+
+            <div class="tbm-field">
+              <label class="tbm-label" for="tbm_field_email">
+                Email Address <span class="tbm-label-required">*</span>
+              </label>
+              <input type="email" id="tbm_field_email" class="tbm-input" placeholder="samuel@example.com" required />
+              <div class="tbm-error-msg" id="err_email">Please enter a valid email address.</div>
+            </div>
+
+            <div class="tbm-field">
+              <label class="tbm-label" for="tbm_field_whatsApp">
+                WhatsApp Number <span class="tbm-label-required">*</span>
+              </label>
+              <input type="tel" id="tbm_field_whatsApp" class="tbm-input" placeholder="+234..." required />
+              <div class="tbm-error-msg" id="err_whatsApp">WhatsApp number is required for event link delivery.</div>
+            </div>
+
+            <div class="tbm-field">
+              <label class="tbm-label">
+                Age Range <span class="tbm-label-required">*</span>
+              </label>
+              <div class="tbm-options-grid" id="opt_ageRange">
+                <div class="tbm-option-item" data-value="Under 20">Under 20</div>
+                <div class="tbm-option-item" data-value="20–29">20–29</div>
+                <div class="tbm-option-item" data-value="30–39">30–39</div>
+                <div class="tbm-option-item" data-value="40–49">40–49</div>
+                <div class="tbm-option-item" data-value="50+">50+</div>
+              </div>
+              <div class="tbm-error-msg" id="err_ageRange">Please choose your age range.</div>
+            </div>
+
+            <div class="tbm-field">
+              <label class="tbm-label" for="tbm_field_location">
+                Where are you currently based? (City & Country) <span class="tbm-label-required">*</span>
+              </label>
+              <input type="text" id="tbm_field_location" class="tbm-input" placeholder="e.g. Lagos, Nigeria" required />
+              <div class="tbm-error-msg" id="err_location">Please specify your location.</div>
+            </div>
+          </div>
+
+          <!-- 2. BUSINESS INFORMATION -->
+          <div class="tbm-form-section">
+            <h4 class="tbm-form-title">2. Business Information</h4>
+
+            <div class="tbm-field">
+              <label class="tbm-label">
+                Which best describes you? <span class="tbm-label-required">*</span>
+              </label>
+              <div class="tbm-option-vertical" id="opt_participantType">
+                <div class="tbm-radio-card" data-value="I currently run a business">
+                  <span style="color:#2563eb;">●</span>
+                  <span>I currently run a business</span>
+                </div>
+                <div class="tbm-radio-card" data-value="I run more than one business">
+                  <span style="color:#2563eb;">●</span>
+                  <span>I run more than one business</span>
+                </div>
+                <div class="tbm-radio-card" data-value="I work in/manage a business but I'm not the owner">
+                  <span style="color:#2563eb;">●</span>
+                  <span>I work in/manage a business but I'm not the owner</span>
+                </div>
+                <div class="tbm-radio-card" data-value="I'm planning to start a business">
+                  <span style="color:#2563eb;">●</span>
+                  <span>I'm planning to start a business</span>
+                </div>
+                <div class="tbm-radio-card" data-value="I'm an employee / student exploring business">
+                  <span style="color:#2563eb;">●</span>
+                  <span>I'm an employee / student exploring business</span>
+                </div>
+              </div>
+              <div class="tbm-error-msg" id="err_participantType">Please choose the option that best describes you.</div>
+            </div>
+
+            <!-- CONDITIONAL BUSINESS OWNER FIELDS -->
+            <div id="tbm-business-conditional-fields" style="display:none; padding-top:16px; border-top:1px solid #e2e8f0;">
+              <div class="tbm-field">
+                <label class="tbm-label" for="tbm_field_businessIndustry">
+                  What industry is your business in? <span class="tbm-label-required">*</span>
+                </label>
+                <input type="text" id="tbm_field_businessIndustry" class="tbm-input" placeholder="e.g. Technology, Retail, Agriculture, Services..." />
+                <div class="tbm-error-msg" id="err_businessIndustry">Please provide your business industry.</div>
+              </div>
+
+              <div class="tbm-field">
+                <label class="tbm-label">
+                  How long has your business been operating? <span class="tbm-label-required">*</span>
+                </label>
+                <div class="tbm-options-grid" id="opt_businessAge">
+                  <div class="tbm-option-item" data-value="Less than 1 year">Less than 1 year</div>
+                  <div class="tbm-option-item" data-value="1–3 years">1–3 years</div>
+                  <div class="tbm-option-item" data-value="4–7 years">4–7 years</div>
+                  <div class="tbm-option-item" data-value="8+ years">8+ years</div>
+                </div>
+                <div class="tbm-error-msg" id="err_businessAge">Please choose how long your business has been operating.</div>
+              </div>
+
+              <div class="tbm-field">
+                <label class="tbm-label">
+                  What is your average monthly business revenue? <span class="tbm-label-required">*</span>
+                </label>
+                <div class="tbm-help-text">Select the closest range. Refers to business revenue, not personal income.</div>
+                <div class="tbm-options-grid" id="opt_monthlyRevenue">
+                  <div class="tbm-option-item" data-value="Pre-revenue / Just starting">Pre-revenue / Just starting</div>
+                  <div class="tbm-option-item" data-value="Under ₦500,000 / $500">Under ₦500,000 / $500</div>
+                  <div class="tbm-option-item" data-value="₦500,000 – ₦2,000,000 / $500–$2,000">₦500,000 – ₦2,000,000</div>
+                  <div class="tbm-option-item" data-value="₦2,000,000 – ₦10,000,000 / $2,000–$10,000">₦2,000,000 – ₦10,000,000</div>
+                  <div class="tbm-option-item" data-value="₦10,000,000+ / $10,000+">₦10,000,000+ / $10,000+</div>
+                </div>
+                <div class="tbm-error-msg" id="err_monthlyRevenue">Please select your monthly revenue bracket.</div>
+              </div>
+
+              <div class="tbm-field">
+                <label class="tbm-label">
+                  How many people currently work in your business? <span class="tbm-label-required">*</span>
+                </label>
+                <div class="tbm-options-grid" id="opt_teamSize">
+                  <div class="tbm-option-item" data-value="Just me">Just me</div>
+                  <div class="tbm-option-item" data-value="2–5 people">2–5 people</div>
+                  <div class="tbm-option-item" data-value="6–20 people">6–20 people</div>
+                  <div class="tbm-option-item" data-value="21+ people">21+ people</div>
+                </div>
+                <div class="tbm-error-msg" id="err_teamSize">Please select your team size.</div>
+              </div>
+
+              <div class="tbm-field">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <label class="tbm-label" style="margin-bottom:0;">
+                    Biggest challenge currently facing in business? <span class="tbm-label-required">*</span>
+                  </label>
+                  <span style="font-size:11px; color:#64748b;" id="tbm_challenge_counter">Select up to 2</span>
+                </div>
+                <div class="tbm-option-vertical" id="opt_biggestChallenge">
+                  <div class="tbm-checkbox-pill" data-value="Getting customers / sales">
+                    <span class="tbm-checkbox-box">✓</span>
+                    <span>Getting customers / sales</span>
+                  </div>
+                  <div class="tbm-checkbox-pill" data-value="Cash flow / finance">
+                    <span class="tbm-checkbox-box">✓</span>
+                    <span>Cash flow / finance</span>
+                  </div>
+                  <div class="tbm-checkbox-pill" data-value="Building a reliable team">
+                    <span class="tbm-checkbox-box">✓</span>
+                    <span>Building a reliable team</span>
+                  </div>
+                  <div class="tbm-checkbox-pill" data-value="Creating systems and processes">
+                    <span class="tbm-checkbox-box">✓</span>
+                    <span>Creating systems and processes</span>
+                  </div>
+                  <div class="tbm-checkbox-pill" data-value="Scaling operations">
+                    <span class="tbm-checkbox-box">✓</span>
+                    <span>Scaling operations</span>
+                  </div>
+                  <div class="tbm-checkbox-pill" data-value="Pricing and profitability">
+                    <span class="tbm-checkbox-box">✓</span>
+                    <span>Pricing and profitability</span>
+                  </div>
+                </div>
+                <div class="tbm-error-msg" id="err_biggestChallenge">Please select at least 1 challenge (up to 2).</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. COACHING OPPORTUNITY -->
+          <div class="tbm-form-section">
+            <h4 class="tbm-form-title">3. Coaching Opportunity</h4>
+
+            <div class="tbm-field">
+              <label class="tbm-label">
+                Would you like to be considered for a FREE 45-minute Business Coaching Session? <span class="tbm-label-required">*</span>
+              </label>
+              <div class="tbm-help-text">10 attendees will be selected for a free 45-minute business coaching session.</div>
+              <div class="tbm-options-grid" id="opt_coachingInterest">
+                <div class="tbm-option-item" data-value="Yes, I'd like to be considered">Yes, I'd like to be considered</div>
+                <div class="tbm-option-item" data-value="No">No</div>
+              </div>
+              <div class="tbm-error-msg" id="err_coachingInterest">Please let us know your coaching interest.</div>
+            </div>
+
+            <div class="tbm-field" id="tbm-coaching-challenge-wrap" style="display:none;">
+              <label class="tbm-label" for="tbm_field_coachingChallenge">
+                What specific business challenge would you like that session to help you solve? <span class="tbm-label-required">*</span>
+              </label>
+              <textarea id="tbm_field_coachingChallenge" class="tbm-input" rows="3" placeholder="Describe the single biggest issue holding your business back..."></textarea>
+              <div class="tbm-error-msg" id="err_coachingChallenge">Please describe the specific challenge you need help with.</div>
+            </div>
+
+            <div class="tbm-field">
+              <label class="tbm-label">
+                Would you be interested in paid coaching or consulting in the future? <span class="tbm-label-required">*</span>
+              </label>
+              <div class="tbm-option-vertical" id="opt_paidCoachingInterest">
+                <div class="tbm-radio-card" data-value="Yes, if it's the right fit">
+                  <span style="color:#2563eb;">●</span>
+                  <span>Yes, if it's the right fit</span>
+                </div>
+                <div class="tbm-radio-card" data-value="Maybe later">
+                  <span style="color:#2563eb;">●</span>
+                  <span>Maybe later</span>
+                </div>
+                <div class="tbm-radio-card" data-value="No, just here for the free sessions">
+                  <span style="color:#2563eb;">●</span>
+                  <span>No, just here for the free sessions</span>
+                </div>
+              </div>
+              <div class="tbm-error-msg" id="err_paidCoachingInterest">Please select an option.</div>
+            </div>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <div style="text-align:center;">
+            <div id="tbm-submit-error-banner" style="display:none; color:#dc2626; background:#fef2f2; border:1px solid #fecaca; border-radius:10px; padding:12px; margin-bottom:16px; font-size:13px;"></div>
+            <button type="submit" id="tbm-submit-btn" class="tbm-btn-primary" style="width:100%; font-size:18px; padding:16px 28px;">
+              CONFIRM REGISTRATION & GET ACCESS
+            </button>
+            <p style="font-size:12px; color:#64748b; margin-top:10px;">
+              Free 6-Week Live Access • You will be redirected to the WhatsApp Channel immediately upon confirmation.
+            </p>
+          </div>
+        </form>
+
+        <!-- SUCCESS VIEW -->
+        <div id="tbm-success-view" style="display:none;" class="tbm-success-card">
+          <div class="tbm-success-icon">✓</div>
+          <h3 class="tbm-font-display" style="font-size:32px; font-weight:700; color:#0f172a; margin-bottom:10px;">
+            REGISTRATION CONFIRMED!
+          </h3>
+          <p style="font-size:16px; color:#475569; margin-bottom:20px;">
+            Thank you for registering for The Business Meeting 2026. Your details have been successfully recorded.
+          </p>
+
+          <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:16px; padding:20px; max-width:540px; margin:0 auto 24px auto;">
+            <div style="font-size:13px; font-weight:700; color:#1e40af; margin-bottom:6px;">NEXT CRITICAL STEP:</div>
+            <p style="font-size:14px; color:#1e3a8a; margin-bottom:16px;">
+              Join the official WhatsApp Channel where all live YouTube session links, book resources, and templates will be shared.
+            </p>
+            <a href="https://whatsapp.com/channel/0029Va9kW1sAjPXMWsqKZj3v" target="_blank" rel="noopener noreferrer" id="tbm-whatsapp-direct-btn" class="tbm-btn-primary" style="background:#25d366 !important; font-size:16px; width:100%;">
+              JOIN WHATSAPP CHANNEL NOW →
+            </a>
+          </div>
+
+          <p style="font-size:13px; color:#64748b;" id="tbm-redirect-countdown-text">
+            Redirecting automatically in <strong id="tbm-countdown-number" style="color:#2563eb;">4</strong> seconds...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // CONFIGURATION CONSTANTS
+  var WHATSAPP_CHANNEL_URL = 'https://whatsapp.com/channel/0029Va9kW1sAjPXMWsqKZj3v';
+  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwIDiBgAXrf5STAaQjxvFgPjksUMcnC84TURuQK7lsWUDDpithjBq7kWf4GsYIeJEBZ/exec';
+
+  // CUSTOM LOGO STATE & UPLOADER PERSISTENCE
+  var brandSvg = document.getElementById('tbm-brand-logo-svg');
+  var customLogoDisplay = document.getElementById('tbm-custom-logo-display');
+  var logoFileInput = document.getElementById('tbm-logo-file-input');
+
+  function applyCustomLogo(dataUrl) {
+    if (!dataUrl) return;
+    if (customLogoDisplay) {
+      customLogoDisplay.src = dataUrl;
+      customLogoDisplay.style.display = 'block';
+    }
+    if (brandSvg) {
+      brandSvg.style.display = 'none';
+    }
+  }
+
+  // Restore saved logo from localStorage if available
+  try {
+    var savedLogo = localStorage.getItem('tbm_custom_logo');
+    if (savedLogo) {
+      applyCustomLogo(savedLogo);
+    }
+  } catch(e) {}
+
+  if (logoFileInput) {
+    logoFileInput.addEventListener('change', function(e) {
+      var file = e.target.files && e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function(evt) {
+        var base64 = evt.target.result;
+        applyCustomLogo(base64);
+        try {
+          localStorage.setItem('tbm_custom_logo', base64);
+        } catch(err) {}
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // APPLICATION STATE
+  var state = {
+    fullName: '',
+    email: '',
+    whatsApp: '',
+    ageRange: '',
+    location: '',
+    participantType: '',
+    businessIndustry: '',
+    businessAge: '',
+    monthlyRevenue: '',
+    teamSize: '',
+    biggestChallenge: [],
+    coachingInterest: '',
+    coachingChallenge: '',
+    paidCoachingInterest: ''
+  };
+
+  // MODAL CONTROLS
+  var modal = document.getElementById('tbm-modal');
+  var closeBtn = document.getElementById('tbm-modal-close-btn');
+  var openTriggers = document.querySelectorAll('.tbm-open-modal-trigger');
+
+  function openModal() {
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeModal() {
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  openTriggers.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // OPTION PILL SELECTION HANDLERS
+  function setupOptionGroup(containerId, stateKey, callback) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    var items = container.querySelectorAll('.tbm-option-item, .tbm-radio-card');
+    items.forEach(function(item) {
+      item.addEventListener('click', function() {
+        items.forEach(function(el) { el.classList.remove('selected'); });
+        item.classList.add('selected');
+        state[stateKey] = item.getAttribute('data-value') || '';
+        hideError(containerId.replace('opt_', 'err_'));
+        if (callback) callback(state[stateKey]);
+      });
+    });
+  }
+
+  // Age Range
+  setupOptionGroup('opt_ageRange', 'ageRange');
+
+  // Participant Type
+  var conditionalBusiness = document.getElementById('tbm-business-conditional-fields');
+  setupOptionGroup('opt_participantType', 'participantType', function(val) {
+    var isBusinessRunner = 
+      val === 'I currently run a business' || 
+      val === 'I run more than one business' || 
+      val === "I work in/manage a business but I'm not the owner";
+    if (conditionalBusiness) {
+      conditionalBusiness.style.display = isBusinessRunner ? 'block' : 'none';
+    }
+  });
+
+  // Business Age, Revenue, Team Size
+  setupOptionGroup('opt_businessAge', 'businessAge');
+  setupOptionGroup('opt_monthlyRevenue', 'monthlyRevenue');
+  setupOptionGroup('opt_teamSize', 'teamSize');
+
+  // Multi-select Challenges (Up to 2)
+  var challengeContainer = document.getElementById('opt_biggestChallenge');
+  var challengeCounter = document.getElementById('tbm_challenge_counter');
+  if (challengeContainer) {
+    var pills = challengeContainer.querySelectorAll('.tbm-checkbox-pill');
+    pills.forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        var val = pill.getAttribute('data-value');
+        var index = state.biggestChallenge.indexOf(val);
+        if (index > -1) {
+          state.biggestChallenge.splice(index, 1);
+          pill.classList.remove('selected');
+        } else {
+          if (state.biggestChallenge.length < 2) {
+            state.biggestChallenge.push(val);
+            pill.classList.add('selected');
+          }
+        }
+        if (challengeCounter) {
+          challengeCounter.textContent = 'Selected: ' + state.biggestChallenge.length + ' / 2';
+        }
+        hideError('err_biggestChallenge');
+      });
+    });
+  }
+
+  // Coaching Interest & Conditional Textarea
+  var coachingWrap = document.getElementById('tbm-coaching-challenge-wrap');
+  setupOptionGroup('opt_coachingInterest', 'coachingInterest', function(val) {
+    if (coachingWrap) {
+      coachingWrap.style.display = (val === "Yes, I'd like to be considered") ? 'block' : 'none';
+    }
+  });
+
+  // Paid Coaching
+  setupOptionGroup('opt_paidCoachingInterest', 'paidCoachingInterest');
+
+  // INPUT ERROR HELPERS
+  function showError(id) {
+    var el = document.getElementById(id);
+    if (el) el.classList.add('visible');
+  }
+
+  function hideError(id) {
+    var el = document.getElementById(id);
+    if (el) el.classList.remove('visible');
+  }
+
+  // FORM VALIDATION
+  function validateForm() {
+    var isValid = true;
+    state.fullName = (document.getElementById('tbm_field_fullName').value || '').trim();
+    state.email = (document.getElementById('tbm_field_email').value || '').trim();
+    state.whatsApp = (document.getElementById('tbm_field_whatsApp').value || '').trim();
+    state.location = (document.getElementById('tbm_field_location').value || '').trim();
+    state.businessIndustry = (document.getElementById('tbm_field_businessIndustry')?.value || '').trim();
+    state.coachingChallenge = (document.getElementById('tbm_field_coachingChallenge')?.value || '').trim();
+
+    if (!state.fullName) { showError('err_fullName'); isValid = false; } else { hideError('err_fullName'); }
+
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!state.email || !emailPattern.test(state.email)) {
+      showError('err_email'); isValid = false;
+    } else { hideError('err_email'); }
+
+    if (!state.whatsApp) { showError('err_whatsApp'); isValid = false; } else { hideError('err_whatsApp'); }
+    if (!state.ageRange) { showError('err_ageRange'); isValid = false; } else { hideError('err_ageRange'); }
+    if (!state.location) { showError('err_location'); isValid = false; } else { hideError('err_location'); }
+    if (!state.participantType) { showError('err_participantType'); isValid = false; } else { hideError('err_participantType'); }
+
+    var isBusinessRunner = 
+      state.participantType === 'I currently run a business' || 
+      state.participantType === 'I run more than one business' || 
+      state.participantType === "I work in/manage a business but I'm not the owner";
+
+    if (isBusinessRunner) {
+      if (!state.businessIndustry) { showError('err_businessIndustry'); isValid = false; } else { hideError('err_businessIndustry'); }
+      if (!state.businessAge) { showError('err_businessAge'); isValid = false; } else { hideError('err_businessAge'); }
+      if (!state.monthlyRevenue) { showError('err_monthlyRevenue'); isValid = false; } else { hideError('err_monthlyRevenue'); }
+      if (!state.teamSize) { showError('err_teamSize'); isValid = false; } else { hideError('err_teamSize'); }
+      if (!state.biggestChallenge || state.biggestChallenge.length === 0) {
+        showError('err_biggestChallenge'); isValid = false;
+      } else { hideError('err_biggestChallenge'); }
+    }
+
+    if (!state.coachingInterest) {
+      showError('err_coachingInterest'); isValid = false;
+    } else {
+      hideError('err_coachingInterest');
+      if (state.coachingInterest === "Yes, I'd like to be considered" && !state.coachingChallenge) {
+        showError('err_coachingChallenge'); isValid = false;
+      } else {
+        hideError('err_coachingChallenge');
+      }
+    }
+
+    if (!state.paidCoachingInterest) {
+      showError('err_paidCoachingInterest'); isValid = false;
+    } else { hideError('err_paidCoachingInterest'); }
+
+    return isValid;
+  }
+
+  // ROBUST WHATSAPP REDIRECT FUNCTION
+  function openWhatsAppChannel() {
+    try {
+      var w = window.open(WHATSAPP_CHANNEL_URL, '_blank', 'noopener,noreferrer');
+      if (w && !w.closed) return true;
+    } catch (e) {}
+
+    try {
+      if (window.top && window.top !== window) {
+        window.top.location.href = WHATSAPP_CHANNEL_URL;
+        return true;
+      }
+    } catch (e) {}
+
+    window.location.href = WHATSAPP_CHANNEL_URL;
+    return true;
+  }
+
+  // SUBMISSION DISPATCHER (GOOGLE SHEETS AUTOMATION)
+  function sendToGoogleSheets(payload) {
+    var params = new URLSearchParams();
+    for (var key in payload) {
+      if (payload.hasOwnProperty(key)) {
+        params.append(key, String(payload[key]));
+      }
+    }
+
+    var fullUrl = GOOGLE_SCRIPT_URL + (GOOGLE_SCRIPT_URL.indexOf('?') !== -1 ? '&' : '?') + params.toString();
+
+    // Fire redundant, non-blocking requests to guarantee Google Sheets catches it across all network conditions
+    try {
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: params.toString()
+      }).catch(function() {});
+    } catch(e) {}
+
+    try {
+      fetch(fullUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      }).catch(function() {});
+    } catch(e) {}
+
+    try {
+      fetch(fullUrl, {
+        method: 'GET',
+        mode: 'no-cors'
+      }).catch(function() {});
+    } catch(e) {}
+  }
+
+  // FORM SUBMISSION LISTENER
+  var form = document.getElementById('tbm-registration-form');
+  var submitBtn = document.getElementById('tbm-submit-btn');
+  var successView = document.getElementById('tbm-success-view');
+  var countdownEl = document.getElementById('tbm-countdown-number');
+  var directWhatsAppBtn = document.getElementById('tbm-whatsapp-direct-btn');
+
+  if (directWhatsAppBtn) {
+    directWhatsAppBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openWhatsAppChannel();
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!validateForm()) {
+        var firstErr = document.querySelector('.tbm-error-msg.visible');
+        if (firstErr) {
+          firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'CONFIRMING SEAT...';
+      }
+
+      var timestampStr = new Date().toLocaleString('en-US', {
+        dateStyle: 'medium',
+        timeStyle: 'short'
+      });
+
+      var challengeStr = Array.isArray(state.biggestChallenge) ? state.biggestChallenge.join(', ') : state.biggestChallenge;
+
+      var sheetPayload = {
+        timestamp: timestampStr,
+        'Timestamp': timestampStr,
+        fullName: state.fullName,
+        'Full Name': state.fullName,
+        name: state.fullName,
+        email: state.email,
+        'Email Address': state.email,
+        'Email': state.email,
+        whatsApp: state.whatsApp,
+        'WhatsApp Number': state.whatsApp,
+        phone: state.whatsApp,
+        ageRange: state.ageRange,
+        'Age Range': state.ageRange,
+        location: state.location,
+        'Location': state.location,
+        participantType: state.participantType,
+        'Participant Type': state.participantType,
+        businessIndustry: state.businessIndustry || 'N/A',
+        'Business Industry': state.businessIndustry || 'N/A',
+        businessAge: state.businessAge || 'N/A',
+        'Business Age': state.businessAge || 'N/A',
+        monthlyRevenue: state.monthlyRevenue || 'N/A',
+        'Monthly Revenue': state.monthlyRevenue || 'N/A',
+        teamSize: state.teamSize || 'N/A',
+        'Team Size': state.teamSize || 'N/A',
+        biggestChallenge: challengeStr || 'N/A',
+        'Biggest Challenge': challengeStr || 'N/A',
+        coachingInterest: state.coachingInterest,
+        'Coaching Interest': state.coachingInterest,
+        coachingChallenge: state.coachingChallenge || 'N/A',
+        'Coaching Challenge': state.coachingChallenge || 'N/A',
+        paidCoachingInterest: state.paidCoachingInterest,
+        'Paid Coaching Interest': state.paidCoachingInterest,
+        source: 'WordPress Standalone Landing Page',
+        'Source': 'WordPress Standalone Landing Page'
+      };
+
+      // 1. Dispatch data to Google Sheets
+      sendToGoogleSheets(sheetPayload);
+
+      // 2. Save local backup in localStorage
+      try {
+        var existing = JSON.parse(localStorage.getItem('tbm_local_leads') || '[]');
+        existing.push(sheetPayload);
+        localStorage.setItem('tbm_local_leads', JSON.stringify(existing));
+      } catch(err) {}
+
+      // 3. Switch modal body to success view immediately
+      form.style.display = 'none';
+      if (successView) successView.style.display = 'block';
+
+      // 4. Countdown and redirect to WhatsApp Channel
+      var seconds = 4;
+      var timer = setInterval(function() {
+        seconds--;
+        if (countdownEl) countdownEl.textContent = String(seconds);
+        if (seconds <= 0) {
+          clearInterval(timer);
+          openWhatsAppChannel();
+        }
+      }, 1000);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
